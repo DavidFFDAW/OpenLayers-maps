@@ -1,0 +1,483 @@
+[
+    {
+        "line": [
+            "",
+            [
+                -494015.05128723127,
+                4400574.176622782
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "3, Pasaje Bego\u00f1a, Gamarra, Bail\u00e9n-Miraflores, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29010, Espa\u00f1a",
+            "road": "Pasaje Bego\u00f1a"
+        }
+    },
+    {
+        "line": [
+            [
+                -494015.05128723127,
+                4400574.176622782
+            ],
+            [
+                -494010.87113724696,
+                4400573.579458498
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "3, Pasaje Bego\u00f1a, Gamarra, Bail\u00e9n-Miraflores, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29010, Espa\u00f1a",
+            "road": "Pasaje Bego\u00f1a"
+        }
+    },
+    {
+        "line": [
+            [
+                -494010.87113724696,
+                4400573.579458498
+            ],
+            [
+                -494009.0796443965,
+                4400554.470201427
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "3, Pasaje Bego\u00f1a, Gamarra, Bail\u00e9n-Miraflores, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29010, Espa\u00f1a",
+            "road": "Pasaje Bego\u00f1a"
+        }
+    },
+    {
+        "line": [
+            [
+                -494009.0796443965,
+                4400554.470201427
+            ],
+            [
+                -494021.62009434955,
+                4400547.901394309
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "2, Pasaje Aralar, Gamarra, Bail\u00e9n-Miraflores, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29010, Espa\u00f1a",
+            "road": "Pasaje Aralar"
+        }
+    },
+    {
+        "line": [
+            [
+                -494021.62009434955,
+                4400547.901394309
+            ],
+            [
+                -494033.5633800191,
+                4400549.095722876
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "2, Pasaje Aralar, Gamarra, Bail\u00e9n-Miraflores, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29010, Espa\u00f1a",
+            "road": "Pasaje Aralar"
+        }
+    },
+    {
+        "line": [
+            [
+                -494033.5633800191,
+                4400549.095722876
+            ],
+            [
+                -494035.3548728695,
+                4400539.54109434
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "2, Pasaje Aralar, Gamarra, Bail\u00e9n-Miraflores, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29010, Espa\u00f1a",
+            "road": "Pasaje Aralar"
+        }
+    },
+    {
+        "line": [
+            [
+                -494035.3548728695,
+                4400539.54109434
+            ],
+            [
+                -494052.6726370904,
+                4400529.389301521
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "2, Pasaje Aralar, Gamarra, Bail\u00e9n-Miraflores, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29010, Espa\u00f1a",
+            "road": "Pasaje Aralar"
+        }
+    },
+    {
+        "line": [
+            [
+                -494052.6726370904,
+                4400529.389301521
+            ],
+            [
+                -494072.37905844516,
+                4400517.446015852
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "3, Pasaje Aralar, Gamarra, Bail\u00e9n-Miraflores, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29010, Espa\u00f1a",
+            "road": "Pasaje Aralar"
+        }
+    },
+    {
+        "line": [
+            [
+                -494072.37905844516,
+                4400517.446015852
+            ],
+            [
+                -494078.94786556344,
+                4400478.6303374255
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "1, Pasaje Gorbea, Gamarra, Bail\u00e9n-Miraflores, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Pasaje Gorbea"
+        }
+    },
+    {
+        "line": [
+            [
+                -494078.94786556344,
+                4400478.6303374255
+            ],
+            [
+                -494083.12801554776,
+                4400441.60615185
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "Biblioteca P\u00fablica Municipal Miguel de Cervantes, 2, Calle Juan Fern\u00e1ndez Suria, Las Chapas, Bail\u00e9n-Miraflores, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29010, Espa\u00f1a",
+            "road": "Calle Juan Fern\u00e1ndez Suria"
+        }
+    },
+    {
+        "line": [
+            [
+                -494083.12801554776,
+                4400441.60615185
+            ],
+            [
+                -494090.5279364628,
+                4400347.432622318
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "71, Calle Mart\u00ednez Maldonado, M\u00e1rmoles (Cruz de Humilladero), Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Calle Mart\u00ednez Maldonado"
+        }
+    },
+    {
+        "line": [
+            [
+                -494090.5279364628,
+                4400347.432622318
+            ],
+            [
+                -494202.19765747315,
+                4400342.058143767
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "79, Calle Mart\u00ednez Maldonado, M\u00e1rmoles (Cruz de Humilladero), Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Calle Mart\u00ednez Maldonado"
+        }
+    },
+    {
+        "line": [
+            [
+                -494202.19765747315,
+                4400342.058143767
+            ],
+            [
+                -494208.169300308,
+                4400336.683665215
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "1, Plaza Aparejador Federico Berm\u00fadez, Las Chapas, Bail\u00e9n-Miraflores, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29010, Espa\u00f1a"
+        }
+    },
+    {
+        "line": [
+            [
+                -494208.169300308,
+                4400336.683665215
+            ],
+            [
+                -494210.5579574419,
+                4400325.934708113
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "1, Plaza Aparejador Federico Berm\u00fadez, Las Chapas, Bail\u00e9n-Miraflores, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29010, Espa\u00f1a"
+        }
+    },
+    {
+        "line": [
+            [
+                -494210.5579574419,
+                4400325.934708113
+            ],
+            [
+                -494221.3069145445,
+                4400312.199929592
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "34, Calle Ingeniero de la Torre Acosta, M\u00e1rmoles (Cruz de Humilladero), Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Calle Ingeniero de la Torre Acosta"
+        }
+    },
+    {
+        "line": [
+            [
+                -494221.3069145445,
+                4400312.199929592
+            ],
+            [
+                -494235.04169306444,
+                4400298.4651510725
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "Copicentro, 9, Calle Ingeniero de la Torre Acosta, Arroyo del Cuarto, Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Calle Ingeniero de la Torre Acosta"
+        }
+    },
+    {
+        "line": [
+            [
+                -494235.04169306444,
+                4400298.4651510725
+            ],
+            [
+                -494232.0558716471,
+                4400282.938879702
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "9, Calle Ingeniero de la Torre Acosta, Arroyo del Cuarto, Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Calle Ingeniero de la Torre Acosta"
+        }
+    },
+    {
+        "line": [
+            [
+                -494232.0558716471,
+                4400282.938879702
+            ],
+            [
+                -494163.57120016636,
+                4400186.458704319
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "Tesorer\u00eda Seguridad Social, 5, Calle Ingeniero de la Torre Acosta, Arroyo del Cuarto, Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Calle Ingeniero de la Torre Acosta"
+        }
+    },
+    {
+        "line": [
+            [
+                -494163.57120016636,
+                4400186.458704319
+            ],
+            [
+                -494158.1967216151,
+                4400172.723925798
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "2, Calle Francisco de Paula Pareja, Arroyo del Cuarto, Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29010, Espa\u00f1a",
+            "road": "Calle Francisco de Paula Pareja"
+        }
+    },
+    {
+        "line": [
+            [
+                -494158.1967216151,
+                4400172.723925798
+            ],
+            [
+                -494158.1967216151,
+                4400158.9891472785
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "16, Calle Sime\u00f3n Gim\u00e9nez Reyna, Arroyo del Cuarto, Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Calle Sime\u00f3n Gim\u00e9nez Reyna"
+        }
+    },
+    {
+        "line": [
+            [
+                -494158.1967216151,
+                4400158.9891472785
+            ],
+            [
+                -494163.57120016636,
+                4400142.865711625
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "16, Calle Sime\u00f3n Gim\u00e9nez Reyna, Arroyo del Cuarto, Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Calle Sime\u00f3n Gim\u00e9nez Reyna"
+        }
+    },
+    {
+        "line": [
+            [
+                -494163.57120016636,
+                4400142.865711625
+            ],
+            [
+                -494170.73717156815,
+                4400130.922425955
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "Tesorer\u00eda Seguridad Social, 5, Calle Ingeniero de la Torre Acosta, Arroyo del Cuarto, Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Calle Ingeniero de la Torre Acosta"
+        }
+    },
+    {
+        "line": [
+            [
+                -494170.73717156815,
+                4400130.922425955
+            ],
+            [
+                -494332.83002226806,
+                4399954.393100494
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "22, Avenida Obispo \u00c1ngel Herrera Oria, Arroyo del Cuarto, Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Avenida Obispo \u00c1ngel Herrera Oria"
+        }
+    },
+    {
+        "line": [
+            [
+                -494332.83002226806,
+                4399954.393100494
+            ],
+            [
+                -494339.9959936698,
+                4399945.435636241
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "22, Avenida Obispo \u00c1ngel Herrera Oria, Arroyo del Cuarto, Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Avenida Obispo \u00c1ngel Herrera Oria"
+        }
+    },
+    {
+        "line": [
+            [
+                -494339.9959936698,
+                4399945.435636241
+            ],
+            [
+                -494332.83002226806,
+                4399938.26966484
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "22, Avenida Obispo \u00c1ngel Herrera Oria, Arroyo del Cuarto, Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Avenida Obispo \u00c1ngel Herrera Oria"
+        }
+    },
+    {
+        "line": [
+            [
+                -494332.83002226806,
+                4399938.26966484
+            ],
+            [
+                -494265.350458235,
+                4399935.283843422
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "22, Avenida Obispo \u00c1ngel Herrera Oria, Arroyo del Cuarto, Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Avenida Obispo \u00c1ngel Herrera Oria"
+        }
+    },
+    {
+        "line": [
+            [
+                -494265.350458235,
+                4399935.283843422
+            ],
+            [
+                -494257.58732254984,
+                4399941.255486257
+            ]
+        ],
+        "color": "#ee2f2f",
+        "stroke": 5,
+        "street": {
+            "fullName": "20, Avenida Obispo \u00c1ngel Herrera Oria, Arroyo del Cuarto, Cruz de Humilladero, M\u00e1laga, M\u00e1laga-Costa del Sol, M\u00e1laga, Andaluc\u00eda, 29007, Espa\u00f1a",
+            "road": "Avenida Obispo \u00c1ngel Herrera Oria"
+        }
+    }
+]
