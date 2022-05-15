@@ -1,20 +1,25 @@
 <?php
 
-$my = new mysqli('146.59.159.40', 'davidff', 'root', '', 3306);
-
-// $my->query("CREATE DATABASE IF NOT EXISTS `event_maps`");
-$my->select_db('event_maps');
-
-
-$services = $my->query("SHOW DATABASES");
-
-if($services && $services->num_rows > 0){
-    $services->fetch_all(MYSQLI_ASSOC);
-}
-
-foreach($services as $service){
-    echo $service['Database'] . PHP_EOL; //work properly, cause it implements Iterator 
-}
-
+require_once (dirname(__FILE__).DIRECTORY_SEPARATOR.'models/Event.php');
+$allEvents = Event::all();
 
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado eventos</title>
+</head>
+<body>
+    <a href="/create.php">Crear Evento</a>
+    <div>
+        <pre>
+            <?php
+                print_r($allEvents);
+            ?>
+        </pre>
+    </div>
+</body>
+</html>
