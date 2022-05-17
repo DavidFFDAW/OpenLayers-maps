@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    if(!isset($_SESSION['username'])) {
+    if(!isset($_SESSION['token'])) {
         header("Location: login.php");
     }
 
@@ -86,6 +86,7 @@
     </style>
 </head>
 <body>
+    
     <div class="botons">
         <button class="b" onclick="saveRoute()">Guardar ruta</button>
         <button class="b" onclick="loadRoute()">Cargar ruta</button>
