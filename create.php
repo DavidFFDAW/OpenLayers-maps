@@ -213,6 +213,7 @@
     // Añade linea en el mapa.
     map.on('click', async function(evt) {
         const coords = evt.coordinate;
+        // moveCoords(coords);
         const lastCoords = previousCoords[previousCoords.length - 1] || coords;
         const points = [lastCoords, coords];       
         console.log(lastCoords);
@@ -293,6 +294,15 @@
             }
         );
     }
+
+    // function moveCoords (coords) {
+    //     console.log(coords);
+    //     console.log(map.getProjection());
+    //     var olCoordinates = ol.proj.transform(coords, 'EPSG:4326', 'EPSG:3857')
+    //     console.log(olCoordinates);
+    //     map.getView().setCenter(olCoordinates);
+    //     // map.getView().setZoom(10);
+    // }
 </script>
 
 <?php include dirname(__FILE__).DIRECTORY_SEPARATOR.'includes/footer.php'; ?>
