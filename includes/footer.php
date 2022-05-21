@@ -1,4 +1,10 @@
-</body>
+<?php
+$dir = explode('C:\xampp\htdocs\\',dirname(__DIR__))[1];
+$port = isset($prt) ? $prt : '';
+$host = $_SERVER['HTTP_HOST'];
+$finalRoute = $host.(!empty($prt) ? ':'.$prt : '').'/'.$dir;
 
-<script src="http://localhost:8080/testeos/eval/mapitas/OpenLayers-maps/een.js"></script>
+?>
+<script id="foota" src="<?= 'http://'.$finalRoute ?>/een.js"></script>
+</body>
 </html>

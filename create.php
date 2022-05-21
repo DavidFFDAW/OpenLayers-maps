@@ -14,10 +14,10 @@
 <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
 
 <div style="box-sizing: border-box; padding: 5%;">
-    <h3 class="ui center aligned header">Creacion de evento</h3>
+    <!-- <h3 class="ui center aligned header">Creacion de evento</h3> -->
     <div class="ui two column doubling grid">
         <div class="column">
-            <h3>Options</h3>
+            <h3>Opciones</h3>
             <div class="ui styled fluid accordion p m">
                 <div class="title" onclick="openAccordionChangeColor(event,'data')">
                     <i class="dropdown icon"></i>
@@ -79,7 +79,7 @@
             </div>
         </div>
         <div class="column" style="position: sticky; top: 50px; left: 50px;">
-            <h3>Map</h3>
+            <h3>Mapa</h3>
             <div class="ui segment" style="position: relative; width: 100%; min-height: 250px;">
                 <div style="width: 100%; min-height: 250px;" id="map"></div>
             </div>
@@ -321,6 +321,7 @@
     //     map.getView().setCenter(olCoordinates);
     //     // map.getView().setZoom(10);
     // }
+    
 </script>
 
 <?php include dirname(__FILE__).DIRECTORY_SEPARATOR.'includes/footer.php'; ?>
