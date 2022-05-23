@@ -72,9 +72,14 @@
                             <input type="number" inputmode="numeric" placeholder="4" value="4" id="stroke" onchange="changeColor(event)">
                         </div>
                     </div>
-                    <!-- <button class="ui primary button" type="submit">
-                        Enviar
-                    </button> -->
+                    <div class="flx btw">
+                        <div class="ui input p">
+                            <label for="" class="ui label dark">Coordenadas</label>
+                            <input type="number" inputmode="numeric" placeholder="-494808.6826199734" value="-494808.6826199734" id="xaxis" onchange="moveCoords(true)">
+                            <input type="number" inputmode="numeric" placeholder="4400872.161600239" value="4400872.161600239" id="yaxis" onchange="moveCoords(true)">
+                            <button class="ui orange button" type="button" onclick="changeType()">Cambiar coordenadas iniciales</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -87,8 +92,9 @@
     </div>
 </div>
 
+<script src="./Globals.js"></script>
 <script src="./MapWrapper.js"></script>
-<script>
+<script>    
     function openAccordionChangeColor(ev, step) {
         ev.preventDefault();
         const allIcons = [...document.querySelectorAll('div.ui.styled.fluid.accordion .title .circular')];
@@ -134,7 +140,7 @@
     //         })
     //     })
     // };
-
+    const globals = new Globals();
     const textarea = document.getElementById('route');
     var initialCoords = [-494808.6826199734, 4400872.161600239];
     var previousCoords = [];
@@ -149,31 +155,52 @@
         map.removeControl(control);        
     });
 
+    function changeType() {
+        globals.set('move', true);
+        console.log(globals.globals);
+    }
+
     map.on('click', async event => {
-        console.log(event.coordinate);
-        const coords = event.coordinate;    
-        const lastCoords = previousCoords[previousCoords.length - 1] || coords;
-        const points = [lastCoords, coords];
+        if (globals.get('routing')) {
 
-        coordinates = [...coordinates, {
-            line: points,
-            color: wrapper.globalColor,
-            stroke: wrapper.globalStrokeWidth,
-            street: await getRoadName(coords),
-        }];
+            console.log(event.coordinate);
+            const coords = event.coordinate;    
+            const lastCoords = previousCoords[previousCoords.length - 1] || coords;
+            const points = [lastCoords, coords];
 
-        previousCoords = [...previousCoords, coords ];
+            coordinates = [...coordinates, {
+                line: points,
+                color: wrapper.globalColor,
+                stroke: wrapper.globalStrokeWidth,
+                street: await getRoadName(coords),
+            }];
 
-        // const marker = wrapper.createMarkerAt(ol.proj.toLonLat(coords));
-        const line = wrapper.createLineStringBetweenTwoPoints(points);
-        
-        wrapper.addVectorLayer(line);
-        textarea.value = JSON.stringify(coordinates, null, 2);
-        textarea.parentElement.parentElement.classList.add('active');
-        if (textarea.style.height !== '500px') {
-            textarea.style.height = Number(textarea.style.height.replace('px', '')) + 20 + 'px';
+            previousCoords = [...previousCoords, coords ];
+
+            // const marker = wrapper.createMarkerAt(ol.proj.toLonLat(coords));
+            const line = wrapper.createLineStringBetweenTwoPoints(points);
+            
+            wrapper.addVectorLayer(line);
+            textarea.value = JSON.stringify(coordinates, null, 2);
+
+        } else 
+            if (globals.get('move')) {
+                moveCoords(false, event.coordinate);
+                document.getElementById('xaxis').value = event.coordinate[0];
+                document.getElementById('yaxis').value = event.coordinate[1];     
         }
+        // textarea.parentElement.parentElement.classList.add('active');
+        // if (textarea.style.height !== '500px') {
+            //     textarea.style.height = Number(textarea.style.height.replace('px', '')) + 20 + 'px';
+        // }
     });
+
+    function moveCoords (coordsFromInputs, coords = []) {
+        const x = coordsFromInputs ? document.getElementById('xaxis').value : coords[0];
+        const y = coordsFromInputs ? document.getElementById('yaxis').value : coords[1];
+        const finalNewCoords = [Number(x), Number(y)];
+        map.getView().setCenter(finalNewCoords);
+    }
 
     // const createMarkerAt = (coords) => {
     //     coords[1] = coords[1] + 0.00001;
