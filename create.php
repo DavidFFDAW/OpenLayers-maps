@@ -9,6 +9,12 @@
 /* #stroke {width: 30px;} */
 #map {position: absolute; z-index: 5; width: 100%;top: 0;left: 0;border-radius: 50px;height: 35vw;}
 .ol-rotate.ol-unselectable.ol-control.ol-hidden, .ol-zoomslider.ol-unselectable.ol-control {display: none;}
+.grrf { display: flex; justify-content: center; align-items: center; flex-wrap: wrap;}
+.grrf .color {width: 100%; height: 55px; border-radius: 10px;  transition: all 0.2s; outline: none; cursor:pointer;}
+.grrf .colololo {margin: 0 10px;}
+.grrf .color:hover {border-radius: 2px; opacity: 0.4;}
+.grrf .ceferino {font-size: 12px;color: grey;text-align: center;transition: all 0.2s; cursor: pointer;}
+.grrf .ceferino:hover {font-size: 13px;}
 </style>
 
 <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
@@ -63,6 +69,16 @@
 
                 <div class="content" data-step="map">
                     <div class="ui input w p">
+                        <label for="" class="ui label dark">Kilómetros</label>
+                        <label class="ui label blue"><span id="kms">0</span> kilometros</label>
+                    </div>
+                    <div class="ui input w p">
+                        <label for="" class="ui label dark">Colores usados</label><br/>
+                        <div class="grrf" id="used-colors">
+
+                        </div>
+                    </div>
+                    <div class="ui input w p">
                         <label for="" class="ui label dark">Color</label>
                         <input type="color" placeholder="#5aad6c" value="#5aad6c" id="color" onchange="changeColor(event)">
                     </div>
@@ -80,6 +96,16 @@
                             <button class="ui orange button" type="button" onclick="changeType()">Cambiar coordenadas iniciales</button>
                         </div>
                     </div>
+                    <div class="flx btw">
+                        <div class="ui input p">
+                            <button class="ui teal button" type="button">Autocerrar ruta</button>
+                        </div>
+                    </div>
+                    <div class="flx btw">
+                        <div class="ui input p">
+                            <button class="ui red button" type="button">Deshacer última ruta</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,6 +118,7 @@
     </div>
 </div>
 
+<script src="./Colors.js"></script>
 <script src="./Globals.js"></script>
 <script src="./MapWrapper.js"></script>
 <script>    
@@ -140,16 +167,26 @@
     //         })
     //     })
     // };
+
     const globals = new Globals();
+    const usedColors = new UsedColors('used-colors');
+
     const textarea = document.getElementById('route');
+    const kilometers = document.getElementById('kms');
     var initialCoords = [-494808.6826199734, 4400872.161600239];
     var previousCoords = [];
     var globalColor = '#5aad6c';
     var globalStrokeWidth = 4;
     var coordinates = [];
 
+    usedColors.add(globalColor);
+
     const wrapper = new MapWrapper(initialCoords, 17, true);
     const map = wrapper.init();
+    
+    const changeColorCb = col=> { wrapper.globalColor = col; }
+    usedColors.setChangeColorCallback(changeColorCb);
+
 
     map.getControls().forEach(control => {
         map.removeControl(control);        
@@ -179,6 +216,8 @@
 
             // const marker = wrapper.createMarkerAt(ol.proj.toLonLat(coords));
             const line = wrapper.createLineStringBetweenTwoPoints(points);
+            // const newKilometerCalculation = wrapper.calculateKilometersBasedOnCoordinates(points);
+            // kilometers.innerText = Number(kilometers.innerText) + newKilometerCalculation;
             
             wrapper.addVectorLayer(line);
             textarea.value = JSON.stringify(coordinates, null, 2);
@@ -234,7 +273,10 @@
         const stroke = Number(document.getElementById('stroke').value);
 
         wrapper.globalColor = color;
+        console.log(wrapper.globalColor);
         wrapper.globalStrokeWidth = stroke;
+
+        usedColors.add(color);
     }
 
     // const layers = [
