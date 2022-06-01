@@ -15,6 +15,10 @@ class MapWrapper {
     //     this.globalColor = color;
     // }
 
+    getFirstCoordinate() {
+        return this.coordinates[0];
+    }
+
     getLastCoordinate() {
         if (!this.coordinates.length > 0) { 
             return this.coords;

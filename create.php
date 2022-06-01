@@ -98,14 +98,24 @@
                     </div>
                     <div class="flx btw">
                         <div class="ui input p">
-                            <button class="ui teal button" type="button">Autocerrar ruta</button>
+                            <button class="ui teal button" type="button" onclick="autoCloseRoute()">Autocerrar ruta</button>
                         </div>
                     </div>
                     <div class="flx btw">
                         <div class="ui input p">
-                            <button class="ui red button" type="button">Deshacer última ruta</button>
+                            <button class="ui red button" type="button" onclick="previousMove()">Deshacer última ruta</button>
                         </div>
                     </div>
+                    <div class="flx btw">
+                        <div class="ui input p">
+                            <button class="ui red button" type="button" onclick="deleteEntireRoute()">Borrar rutacion completa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flx btw">
+                <div class="ui input p">
+                    <button class="ui blue button" type="button">Crear Evento</button>
                 </div>
             </div>
         </div>
@@ -211,6 +221,8 @@
                 stroke: wrapper.globalStrokeWidth,
                 street: await getRoadName(coords),
             }];
+
+            wrapper.coordinates = coordinates;
 
             previousCoords = [...previousCoords, coords ];
 
@@ -323,6 +335,15 @@
     //     map.addLayer(marker);
     // }); 
 
+    function autoCloseRoute() {
+        const origin = wrapper.getFirstCoordinate();
+        const { line } = wrapper.getLastCoordinate();
+        // console.log(wrapper.coordinates);
+        console.log([ line, origin.line ]);
+        const lineVector = wrapper.createLineStringBetweenTwoPoints([ line[1], origin.line[1] ]);
+        wrapper.addVectorLayer(lineVector);
+    }
+
     async function getRoadName (coords) {
         const [lon,lat] = ol.proj.toLonLat(coords);
         const url = `http://nominatim.openstreetmap.org/reverse?format=json&lon=${lon}&lat=${lat}`;
@@ -360,27 +381,27 @@
     //     form.submit();
     // }
 
-    // function previousMove () {
-    //     coordinates = coordinates.slice(0,-1);
-    //     previousCoords = previousCoords.slice(0, -1);
-    //     const layersArray = map.getLayers().getArray();
-    //     const reversed = [...layersArray].reverse();
-    //     // will get the first direction of the array reversed which is the actual last direction
-    //     const foundLayer = reversed.find( layer => layer.get('name') === 'direction');
+    function previousMove () {
+        coordinates = coordinates.slice(0,-1);
+        previousCoords = previousCoords.slice(0, -1);
+        const layersArray = map.getLayers().getArray();
+        const reversed = [...layersArray].reverse();
+        // will get the first direction of the array reversed which is the actual last direction
+        const foundLayer = reversed.find( layer => layer.get('name') === 'direction');
         
-    //     if (foundLayer) map.removeLayer(foundLayer);
-    // }
+        if (foundLayer) map.removeLayer(foundLayer);
+    }
 
-    // function deleteEntireRoute () {
-    //     coordinates = [];
-    //     previousCoords = [];
-    //     map.getLayers().getArray()
-    //         .filter( layer => layer.get('name') === 'direction')
-    //         .forEach( item => {
-    //             map.removeLayer(item);
-    //         }
-    //     );
-    // }
+    function deleteEntireRoute () {
+        coordinates = [];
+        previousCoords = [];
+        map.getLayers().getArray()
+            .filter( layer => layer.get('name') === 'direction')
+            .forEach( item => {
+                map.removeLayer(item);
+            }
+        );
+    }
 
     // function moveCoords (coords) {
     //     console.log(coords);
